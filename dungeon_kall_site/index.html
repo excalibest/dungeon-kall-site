@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dungeon.Kall | Game Master &amp; Blog</title>
+  <title>Dungeons By Kall | Game Master &amp; Blog</title>
   <!-- Link to the primary stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- Google fonts for a fantasy‑inspired look -->
@@ -15,7 +15,7 @@
 <body>
   <!-- Site navigation -->
   <header class="navbar">
-    <div class="logo">Dungeon.Kall</div>
+    <div class="logo"><a href="index.html">Dungeons By Kall</a></div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -35,9 +35,9 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Welcome Adventurers</h1>
+      <h1>Welcome to Dungeons By Kall</h1>
       <p>
-        Your journey begins here – explore my world as a Game Master, actor &amp;
+        Your journey begins here – explore my world as a Game Master, actor and
         developer.
       </p>
       <a href="schedule.html" class="btn">Book a Session</a>
@@ -45,9 +45,22 @@
   </section>
 
   <main>
+    <!-- Introductory description section -->
+    <section id="intro" class="content-section">
+      <h2>Unleash Your Imagination</h2>
+      <p>
+        Unleash your imagination with Dungeons By Kall, your gateway to unforgettable
+        adventures! Gather your friends and dive headfirst into captivating worlds
+        filled with mythical creatures, treacherous quests and boundless possibilities.
+        Whether you're a seasoned adventurer or a curious newcomer, explore
+        thrilling tabletop RPGs like Dungeons &amp; Dragons, Pathfinder and more.
+        Forge lasting memories and strengthen bonds as you craft your own epic tales.
+        Your story awaits – are you ready to answer the call?
+      </p>
+    </section>
     <!-- About section -->
     <section id="about" class="content-section">
-      <h2>About Dungeon.Kall</h2>
+    <h2>About Dungeons By Kall</h2>
       <p>
         Hi! I'm Kall, a passionate Game Master with years of theatrical
         experience and a deep love for storytelling. I'm currently pursuing a
@@ -91,6 +104,45 @@
         challenges along the way.
       </p>
     </section>
+
+    <!-- Contact & Newsletter section -->
+    <section id="contact" class="content-section">
+      <h2>Contact &amp; Newsletter</h2>
+      <p>
+        If you’d like to get in touch or stay up to date with news and promotions,
+        drop me a line or join the mailing list. I respond to all inquiries
+        personally.
+      </p>
+      <p>
+        Email:
+        <a href="mailto:dungeonkall@gmail.com">dungeonkall@gmail.com</a>
+      </p>
+      <!-- Newsletter sign‑up form powered by Netlify Forms -->
+      <form
+        name="subscribe"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="review-form"
+      >
+        <input type="hidden" name="form-name" value="subscribe" />
+        <p class="hidden">
+          <label
+            >Don’t fill this out:
+            <input name="bot-field" />
+          </label>
+        </p>
+        <div class="form-group">
+          <label for="sub-name">Name</label>
+          <input type="text" id="sub-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="sub-email">Email</label>
+          <input type="email" id="sub-email" name="email" required />
+        </div>
+        <button type="submit" class="btn">Join Newsletter</button>
+      </form>
+    </section>
   </main>
 
   <!-- Footer with social link -->
@@ -102,7 +154,7 @@
         >Instagram</a
       >
     </div>
-    <p>&copy; 2025 Dungeon.Kall. All rights reserved.</p>
+    <p>&copy; 2025 Dungeons By Kall. All rights reserved.</p>
   </footer>
   <!-- Main JavaScript file -->
   <script src="js/script.js"></script>

@@ -1,5 +1,5 @@
 /*
- * Main stylesheet for Dungeon.Kall’s website
+ * Main stylesheet for Dungeons By Kall’s website
  *
  * Colors and variables are defined at the top for easy customization.
  * The layout is responsive, supporting mobile navigation via a hamburger menu.
@@ -35,20 +35,28 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  /* Increase nav bar height for better clickability */
+  height: 80px;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  /* Extra horizontal padding to bring nav elements toward center */
+  padding: 0 40px;
   z-index: 1000;
   backdrop-filter: blur(4px);
 }
 
 .logo {
   font-family: 'Cinzel', serif;
-  font-size: 24px;
+  font-size: 32px; /* larger logo text */
   color: var(--accent);
+}
+
+/* Ensure anchor within logo inherits styles and has no underline */
+.logo a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -57,13 +65,13 @@ body {
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin-left: 30px; /* increased spacing between nav items */
 }
 
 .nav-links a {
   color: var(--text-light);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px; /* larger font for easier clicking */
   transition: color 0.3s ease;
 }
 

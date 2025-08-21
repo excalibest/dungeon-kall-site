@@ -1,5 +1,5 @@
 /*
- * Simple JavaScript for Dungeon.Kall’s site
+ * Simple JavaScript for Dungeons By Kall’s site
  *
  * Handles hamburger menu toggling on small screens. If you wish to extend
  * interactivity – such as adding scroll animations or dark/light theme
