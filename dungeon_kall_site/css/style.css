@@ -1,14 +1,15 @@
 /*
- * Main stylesheet for Dungeons By Kall’s website
+ * Main stylesheet for Game Master Kall’s website
  *
- * Colors and variables are defined at the top for easy customization.
- * The layout is responsive, supporting mobile navigation via a hamburger menu.
+ * Defines a dark, moody palette inspired by torch‑lit dungeons. The
+ * navigation bar has been enlarged for easier clicking, and the hero
+ * background uses a custom image with a brighter filter for more detail.
  */
 
 :root {
   --bg: #0d0d0d;
   --surface: #1a1a1a;
-  --primary: #c47a3c; /* warm torch color */
+  --primary: #c47a3c;
   --accent: #ffb057;
   --text-light: #f5f5f5;
   --text-muted: #b3a89f;
@@ -35,13 +36,11 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  /* Increase nav bar height for better clickability */
   height: 80px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Extra horizontal padding to bring nav elements toward center */
   padding: 0 40px;
   z-index: 1000;
   backdrop-filter: blur(4px);
@@ -49,13 +48,11 @@ body {
 
 .logo {
   font-family: 'Cinzel', serif;
-  font-size: 32px; /* larger logo text */
-  color: var(--accent);
+  font-size: 32px;
 }
 
-/* Ensure anchor within logo inherits styles and has no underline */
 .logo a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -65,13 +62,13 @@ body {
 }
 
 .nav-links li {
-  margin-left: 30px; /* increased spacing between nav items */
+  margin-left: 30px;
 }
 
 .nav-links a {
   color: var(--text-light);
   text-decoration: none;
-  font-size: 20px; /* larger font for easier clicking */
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -95,16 +92,16 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Mobile navigation */
+/* Responsive navigation */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
     right: -100%;
-    top: 60px;
+    top: 80px;
     flex-direction: column;
     background: var(--surface);
-    width: 200px;
-    height: calc(100% - 60px);
+    width: 220px;
+    height: calc(100% - 80px);
     transition: right 0.3s ease-in-out;
     padding-top: 20px;
   }
@@ -120,14 +117,14 @@ body {
   }
 }
 
-/* Hero section styling */
+/* Hero section */
 .hero {
   position: relative;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px; /* offset nav bar */
+  margin-top: 80px;
   text-align: center;
   color: var(--text-light);
 }
@@ -142,7 +139,8 @@ body {
   background-image: url('../assets/dungeon_background.png');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.3);
+  /* Increase brightness to reveal more detail */
+  filter: brightness(0.6);
   z-index: -2;
 }
 
@@ -152,7 +150,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.85) 100%);
   z-index: -1;
 }
 
@@ -167,7 +165,7 @@ body {
   font-size: 18px;
   margin-bottom: 20px;
   color: var(--text-muted);
-  max-width: 600px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -211,7 +209,7 @@ main {
   margin-bottom: 20px;
 }
 
-/* Session cards on schedule page */
+/* Session cards */
 .session-options {
   display: flex;
   flex-wrap: wrap;
@@ -246,8 +244,8 @@ main {
   height: 550px;
 }
 
-/* Review form styling */
-.review-form {
+/* Form styling */
+.form {
   background: var(--surface);
   padding: 20px;
   border-radius: var(--radius);
@@ -256,20 +254,20 @@ main {
   margin: 20px 0;
 }
 
-.review-form .form-group {
+.form .form-group {
   margin-bottom: 15px;
 }
 
-.review-form label {
+.form label {
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
   color: var(--text-light);
 }
 
-.review-form input,
-.review-form select,
-.review-form textarea {
+.form input,
+.form select,
+.form textarea {
   width: 100%;
   padding: 10px;
   border-radius: var(--radius);
@@ -278,18 +276,13 @@ main {
   color: var(--text-light);
 }
 
-.review-form input:focus,
-.review-form select:focus,
-.review-form textarea:focus {
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
   outline: none;
   border-color: var(--primary);
 }
 
-.hidden {
-  display: none;
-}
-
-/* Reviews list */
 .reviews-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -306,36 +299,26 @@ main {
 .review h4 {
   color: var(--primary);
   margin-bottom: 8px;
-  font-size: 20px;
-  font-family: 'Cinzel', serif;
 }
 
-.review p {
-  color: var(--text-muted);
-  margin-bottom: 12px;
-}
-
-.review .reviewer {
-  color: var(--text-light);
-  font-size: 14px;
-  font-style: italic;
-}
-
-/* Footer styling */
+/* Footer */
 footer {
-  background: var(--surface);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
   text-align: center;
-  color: var(--text-muted);
+  margin-top: 40px;
+}
+
+footer .social {
+  margin-bottom: 10px;
 }
 
 footer .social a {
-  color: var(--primary);
-  margin: 0 10px;
+  color: var(--accent);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-footer .social a:hover {
-  color: var(--accent);
+footer p {
+  color: var(--text-muted);
+  font-size: 14px;
 }
